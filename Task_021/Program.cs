@@ -11,9 +11,9 @@ void QueryCall(string numDot)
     Console.WriteLine($"Введите координаты {numDot} точки:");
 }
 
-int Coor (string Coor)
+int Coor (string coor)
 {
-    Console.Write($"{Coor}:");
+    Console.Write($"{coor}: ");
     return Convert.ToInt16(Console.ReadLine());
 }
 
@@ -27,11 +27,11 @@ int x2 = Coor("x");
 int y2 = Coor("y");
 int z2 = Coor("z");
 
-double result(double x1, double x2, double y1, double y2, double z1, double z2)
+double Result(double x1, double x2, double y1, double y2, double z1, double z2)
 {
      return Math.Sqrt(Math.Pow((x2-x1), 2) + Math.Pow((y2-y1), 2) + Math.Pow((z2-z1), 2));
 }
 
-double Result = Math.Round(result(x1, x2, y1, y2, z1, z2), 2); 
+double result = Math.Round(Result(x1, x2, y1, y2, z1, z2), 2); 
 
-Console.WriteLine($"Расстояние между точками = {Result}");
+Console.WriteLine($"Расстояние между точками = {result}");
